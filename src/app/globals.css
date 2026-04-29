@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tokens MailForge OS — espejan las variables de Figma sTTrCFxXKOYmbdw4GjxKJO */
+:root {
+  --color-neon-orange: #ff7a4d;
+  --color-neon-red: #ff2526;
+  --color-neon-pink: #ff4583;
+  --color-neon-magenta: #eb5583;
+
+  --gradient-hero: linear-gradient(20deg, #ff7a4d 0%, #ff2526 50%, #ff4583 100%);
+  --gradient-reverse: linear-gradient(222deg, #ff7a4d 0%, #ff2526 50%, #ff4583 100%);
+
+  --color-bg: #1d1d1d;
+  --color-text: #f9f9f9;
+}
+
+html,
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Trebuchet MS", Trebuchet, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Pequeña animación que usaremos en el hello world */
+@keyframes pulse-neon {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.pulse-neon {
+  animation: pulse-neon 2s ease-in-out infinite;
+}
